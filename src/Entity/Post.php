@@ -53,15 +53,30 @@ class Post
      * @ORM\ManyToOne(targetEntity=User::class, inversedBy="post")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $user;
+    private User $user;
 
     /**
      * @ORM\OneToMany(targetEntity=Interaction::class, mappedBy="post", orphanRemoval=true)
      */
     private $interactions;
-
-    public function __construct()
+    
+    public function __construct(
+        $user = null,
+        $title =null, 
+        $type =null , 
+        $description = null , 
+        $file =null, 
+        $creation_date =null , 
+        $url =null
+        )
     {
+        $this->title = $title;
+        $this->type = $type;
+        $this->description = $description;
+        $this->file = $file;
+        $this->creation_date = new \DateTime();
+        $this->url = $url;
+        $this->user = $user;
         $this->interactions = new ArrayCollection();
     }
 
