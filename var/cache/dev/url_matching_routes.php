@@ -15,6 +15,8 @@ return [
         '/_profiler/xdebug' => [[['_route' => '_profiler_xdebug', '_controller' => 'web_profiler.controller.profiler::xdebugAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
         '/insert/post' => [[['_route' => 'insert_post', '_controller' => 'App\\Controller\\PostController::insert'], null, null, null, false, false, null]],
+        '/update/post' => [[['_route' => 'update_post', '_controller' => 'App\\Controller\\PostController::update'], null, null, null, false, false, null]],
+        '/delete/post' => [[['_route' => 'delete_post', '_controller' => 'App\\Controller\\PostController::delete'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
