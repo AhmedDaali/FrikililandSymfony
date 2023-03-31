@@ -168,6 +168,6 @@ class __TwigTemplate_3c25a5e35363a7291ab60ca3ca2e36fc extends Template
 
     {{ include('@WebProfiler/Profiler/toolbar_item.html.twig', { link: false }) }}
 {% endblock %}
-", "@WebProfiler/Collector/ajax.html.twig", "C:\\Users\\ahmed\\Documents\\FP DAM\\PHP\\Frikili-master\\Frikili-master\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\ajax.html.twig");
+", "@WebProfiler/Collector/ajax.html.twig", "C:\\Users\\ahmed\\Documents\\FP DAM\\PHP\\Frikili-master\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\ajax.html.twig");
     }
 }

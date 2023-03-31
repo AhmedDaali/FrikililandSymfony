@@ -579,6 +579,6 @@ class __TwigTemplate_f57b7fc0e7aa69281601fb71d0dfe8ff extends Template
         {% endif %}
     </div>
 {% endblock %}
-", "@WebProfiler/Collector/http_client.html.twig", "C:\\Users\\ahmed\\Documents\\FP DAM\\PHP\\Frikili-master\\Frikili-master\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\http_client.html.twig");
+", "@WebProfiler/Collector/http_client.html.twig", "C:\\Users\\ahmed\\Documents\\FP DAM\\PHP\\Frikili-master\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\http_client.html.twig");
     }
 }

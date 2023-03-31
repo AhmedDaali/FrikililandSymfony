@@ -60,14 +60,14 @@ class Post
      */
     private $interactions;
     
-    public function __construct(
-        $user = null,
-        $title =null, 
-        $type =null , 
-        $description = null , 
-        $file =null, 
-        $creation_date =null , 
-        $url =null
+    /*public function __construct(
+        $user ,
+        $title , 
+        $type  , 
+        $description  , 
+        $file , 
+        $creation_date  , 
+        $url 
         )
     {
         $this->title = $title;
@@ -78,7 +78,12 @@ class Post
         $this->url = $url;
         $this->user = $user;
         $this->interactions = new ArrayCollection();
+    }*/
+    public function __construct()
+    {
+        $this->interactions = new ArrayCollection();
     }
+
 
     public function getId(): ?int
     {

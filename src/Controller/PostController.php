@@ -85,13 +85,40 @@ class PostController extends AbstractController
     return new JsonResponse(['succes'=>true]); 
     }*/
 
+    /*#[Route('/', name: 'post')]
+    public function index(HttpFoundationRequest $request): Response
+    {
+        $user = $this->em->getRepository(User::class)->find(1);
+        $post = new Post($user, "", "",  "", "",null, "");
+        $form = $this->createForm(PostType::class, $post);
+        $form->handleRequest($request);
+        if($form->isSubmitted()&& $form->isValid()){
+            $this->em->persist($post);
+            $this->em->flush();
+            return $this->redirectToRoute('post');
+        }
+        return $this->render('post/index.html.twig', [
+            'form' =>$form->createView()
+    
+        ]);
+    }*/
     #[Route('/', name: 'post')]
     public function index(HttpFoundationRequest $request): Response
     {
+        
         $post = new Post();
         $form = $this->createForm(PostType::class, $post);
         $form->handleRequest($request);
+
+        if($form->isSubmitted()&& $form->isValid()){
+            $user = $this->em->getRepository(User::class)->find(1);
+            $post->setUser($user);
+            $this->em->persist($post);
+            $this->em->flush();
+            return $this->redirectToRoute('post');
+        }
         return $this->render('post/index.html.twig', [
+            'form' =>$form->createView()
     
         ]);
     }
