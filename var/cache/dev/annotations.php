@@ -56,8 +56,12 @@ return [[
 '[C]Symfony%5CBundle%5CFrameworkBundle%5CController%5CAbstractController%24container' => 1,
 'App%5CController%5CPostController' => 0,
 '[C]App%5CController%5CPostController' => 1,
+'App%5CController%5CPostController%23__construct' => 0,
+'[C]App%5CController%5CPostController%23__construct' => 1,
 'App%5CController%5CPostController%23index' => 0,
 '[C]App%5CController%5CPostController%23index' => 1,
+'App%5CController%5CPostController%24em' => 0,
+'[C]App%5CController%5CPostController%24em' => 1,
 'App%5CEntity%5CInteraction' => 2,
 '[C]App%5CEntity%5CInteraction' => 1,
 'App%5CEntity%5CInteraction%23getId' => 0,
@@ -780,7 +784,7 @@ return [[
 ], [
 
 0 => [],
-1 => 1680164862,
+1 => 1680253931,
 2 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [

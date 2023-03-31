@@ -191,6 +191,6 @@ class __TwigTemplate_ab87b9d1b395c32f68ab95c07dfde629 extends Template
         {% block body %}{% endblock %}
     </body>
 </html>
-", "base.html.twig", "C:\\Users\\ahmed\\Documents\\FP DAM\\PHP\\Frikili-master\\Frikili-master\\templates\\base.html.twig");
+", "base.html.twig", "C:\\Users\\ahmed\\Documents\\FP DAM\\PHP\\Frikili-master\\templates\\base.html.twig");
     }
 }

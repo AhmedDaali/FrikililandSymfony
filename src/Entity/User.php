@@ -63,8 +63,23 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     private $interactions;
 
-    public function __construct()
+    public function __construct(
+        $id = null,
+        $email =null,
+        $roles = null, 
+        $password = null,
+        $baneado = null,
+        $nombre = null,
+        $profesion = null, 
+        $post = null, 
+        $interactions = null)
     {
+        $this->id = $id;
+        $this->email = $email;
+        $this->roles = $roles;
+        $this->password = $password;
+        $this->baneado = $baneado;
+        $this->nombre = $nombre;
         $this->profesion = new ArrayCollection();
         $this->post = new ArrayCollection();
         $this->interactions = new ArrayCollection();

@@ -91,32 +91,28 @@ class __TwigTemplate_0624d8ce04b17de23eee4eb9421c570a extends Template
 </style>
 
 <div class=\"example-wrapper\">
-    <h1>Hello ";
+    <!--<h1>Hello ";
         // line 12
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\DumpExtension']->dump($this->env, $context, (isset($context["controller_name"]) || array_key_exists("controller_name", $context) ? $context["controller_name"] : (function () { throw new RuntimeError('Variable "controller_name" does not exist.', 12, $this->source); })()));
-        echo "! ✅</h1>
-    ";
-        // line 13
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\DumpExtension']->dump($this->env, $context, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 13, $this->source); })()));
-        echo "
+        echo "! ✅</h1>-->
     ";
         // line 14
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\DumpExtension']->dump($this->env, $context, (isset($context["posts"]) || array_key_exists("posts", $context) ? $context["posts"] : (function () { throw new RuntimeError('Variable "posts" does not exist.', 14, $this->source); })()));
-        echo "
-    ";
+        echo "    ";
         // line 15
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\DumpExtension']->dump($this->env, $context, (isset($context["custom_post"]) || array_key_exists("custom_post", $context) ? $context["custom_post"] : (function () { throw new RuntimeError('Variable "custom_post" does not exist.', 15, $this->source); })()));
-        echo "
-    ";
+        echo "    ";
+        // line 16
+        echo "    ";
         // line 17
-        echo "    This friendly message is coming from:
+        echo "    ";
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 17, $this->source); })()), 'form');
+        echo "
+    This friendly message is coming from:
     <ul>
         <li>Your controller at <code><a href=\"";
-        // line 19
+        // line 20
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("C:/Users/ahmed/Documents/FP DAM/PHP/Frikili-master/Frikili-master/src/Controller/PostController.php", 0), "html", null, true);
         echo "\">src/Controller/PostController.php</a></code></li>
         <li>Your template at <code><a href=\"";
-        // line 20
+        // line 21
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("C:/Users/ahmed/Documents/FP DAM/PHP/Frikili-master/Frikili-master/templates/post/index.html.twig", 0), "html", null, true);
         echo "\">templates/post/index.html.twig</a></code></li>
     </ul>
@@ -142,7 +138,7 @@ class __TwigTemplate_0624d8ce04b17de23eee4eb9421c570a extends Template
 
     public function getDebugInfo()
     {
-        return array (  120 => 20,  116 => 19,  112 => 17,  108 => 15,  104 => 14,  100 => 13,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  116 => 21,  112 => 20,  105 => 17,  103 => 16,  101 => 15,  99 => 14,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -158,11 +154,12 @@ class __TwigTemplate_0624d8ce04b17de23eee4eb9421c570a extends Template
 </style>
 
 <div class=\"example-wrapper\">
-    <h1>Hello {{ dump(controller_name) }}! ✅</h1>
-    {{dump(post)}}
-    {{dump(posts)}}
-    {{dump(custom_post)}}
+    <!--<h1>Hello {#{{ dump(controller_name) }}#}! ✅</h1>-->
+    {#{{dump(post)}}#}
+    {#{{dump(posts)}}#}
+    {#{{dump(custom_post)}}#}
     {#{{dump(user)}}#}
+    {{form(form)}}
     This friendly message is coming from:
     <ul>
         <li>Your controller at <code><a href=\"{{ 'C:/Users/ahmed/Documents/FP DAM/PHP/Frikili-master/Frikili-master/src/Controller/PostController.php'|file_link(0) }}\">src/Controller/PostController.php</a></code></li>
@@ -170,6 +167,6 @@ class __TwigTemplate_0624d8ce04b17de23eee4eb9421c570a extends Template
     </ul>
 </div>
 {% endblock %}
-", "post/index.html.twig", "C:\\Users\\ahmed\\Documents\\FP DAM\\PHP\\Frikili-master\\Frikili-master\\templates\\post\\index.html.twig");
+", "post/index.html.twig", "C:\\Users\\ahmed\\Documents\\FP DAM\\PHP\\Frikili-master\\templates\\post\\index.html.twig");
     }
 }
