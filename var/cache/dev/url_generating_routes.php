@@ -15,7 +15,11 @@ return [
     '_profiler_router' => [['token'], ['_controller' => 'web_profiler.controller.router::panelAction'], [], [['text', '/router'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], [], []],
     '_profiler_exception' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::body'], [], [['text', '/exception'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], [], []],
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], [], []],
-    'post' => [[], ['_controller' => 'App\\Controller\\PostController::index'], [], [['text', '/']], [], [], []],
+    'login' => [[], ['_controller' => 'App\\Controller\\LoginController::index'], [], [['text', '/login']], [], [], []],
+    'post' => [['id'], ['_controller' => 'App\\Controller\\PostController::getPost'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/post']], [], [], []],
+    'delete_post' => [[], ['_controller' => 'App\\Controller\\PostController::delete'], [], [['text', '/delete_post/']], [], [], []],
+    'post_form' => [[], ['_controller' => 'App\\Controller\\PostController::postForm'], [], [['text', '/formulario/']], [], [], []],
+    'post_form2' => [[], ['_controller' => 'App\\Controller\\PostController::postForm2'], [], [['text', '/post/form2/']], [], [], []],
     'userRegistration' => [[], ['_controller' => 'App\\Controller\\UserController::userRegistration'], [], [['text', '/registration']], [], [], []],
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], [], []],
 ];

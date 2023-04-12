@@ -91,21 +91,20 @@ class __TwigTemplate_0624d8ce04b17de23eee4eb9421c570a extends Template
 </style>
 
 <div class=\"example-wrapper\">
-    <!--<h1>Hello ";
-        // line 12
-        echo "! ✅</h1>-->
+   
     ";
-        // line 14
-        echo "    ";
+        // line 13
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\DumpExtension']->dump($this->env, $context, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 13, $this->source); })()));
+        echo "
+    ";
         // line 15
         echo "    ";
         // line 16
         echo "    ";
         // line 17
         echo "    ";
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 17, $this->source); })()), 'form');
-        echo "
-    This friendly message is coming from:
+        // line 18
+        echo "    This friendly message is coming from:
     <ul>
         <li>Your controller at <code><a href=\"";
         // line 20
@@ -138,7 +137,7 @@ class __TwigTemplate_0624d8ce04b17de23eee4eb9421c570a extends Template
 
     public function getDebugInfo()
     {
-        return array (  116 => 21,  112 => 20,  105 => 17,  103 => 16,  101 => 15,  99 => 14,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  115 => 21,  111 => 20,  107 => 18,  105 => 17,  103 => 16,  101 => 15,  97 => 13,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -154,12 +153,12 @@ class __TwigTemplate_0624d8ce04b17de23eee4eb9421c570a extends Template
 </style>
 
 <div class=\"example-wrapper\">
-    <!--<h1>Hello {#{{ dump(controller_name) }}#}! ✅</h1>-->
-    {#{{dump(post)}}#}
+   
+    {{dump(post)}}
     {#{{dump(posts)}}#}
     {#{{dump(custom_post)}}#}
     {#{{dump(user)}}#}
-    {{form(form)}}
+    {# {{form(form)}} #}
     This friendly message is coming from:
     <ul>
         <li>Your controller at <code><a href=\"{{ 'C:/Users/ahmed/Documents/FP DAM/PHP/Frikili-master/Frikili-master/src/Controller/PostController.php'|file_link(0) }}\">src/Controller/PostController.php</a></code></li>
