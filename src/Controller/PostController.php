@@ -23,8 +23,8 @@ class PostController extends AbstractController
         $this->em = $em;
     }
 
-   /* #[Route('/post/{id}', name: 'post')]
-    public function index($id): Response
+    #[Route('/post/{id}', name: 'post')]
+    public function getPost($id): Response
     {
         $post1 =$this->em->getRepository(Post::class)->find($id);
         $posts1 =$this->em->getRepository(Post::class)->findAll();
@@ -37,16 +37,18 @@ class PostController extends AbstractController
                 'posts'=>$posts1,
                 'custom_post'=>$custom_post
         ]);
-    }*/
-    /*#[Route('/user/{id}', name: 'user')]
+    }
+
+   /* #[Route('/user/{id}', name: 'user')]
     public function index($id): Response
     {
         $user1 =$this->em->getRepository(User::class)->find($id);
         return $this->render('user/index.html.twig', [
             'user'=>$user1
         ]);
-    }*/
-    /*#[Route('/insert/post', name: 'insert_post')]
+    }
+
+    #[Route('/insert/post', name: 'insert_post')]
     public function insert(): Response
     {
         $user = $this->em->getRepository(User::class)->find(1);
@@ -60,33 +62,33 @@ class PostController extends AbstractController
         ->setFile("Hola todos")
         ->setType("Opinión")*/
         //$post->setUser($user);
-    /*$this->em->persist($post);
+   /* $this->em->persist($post);
     $this->em->flush();  
     return new JsonResponse(['succes'=>true]); 
-    }*/
+    }
 
 
-    /*#[Route('/update/post', name: 'update_post')]
+    #[Route('/update/post', name: 'update_post')]
     public function update(): Response
     {
         $post = $this->em->getRepository(Post::class)->find(5);
         $post->setTitle("Mi post actualizado");  
     $this->em->flush();  
     return new JsonResponse(['succes'=>true]); 
-    }
+    }*/
 
-    #[Route('/delete/post', name: 'delete_post')]
+    #[Route('/delete_post/', name: 'delete_post')]
     public function delete(): Response
     {
-        $post = $this->em->getRepository(Post::class)->find(6);
+        $post = $this->em->getRepository(Post::class)->find(8);
 
     $this->em->remove($post);  
     $this->em->flush();  
     return new JsonResponse(['succes'=>true]); 
-    }*/
+    }
 
-    /*#[Route('/', name: 'post')]
-    public function index(HttpFoundationRequest $request): Response
+    #[Route('/formulario/', name: 'post_form')]
+    public function postForm(HttpFoundationRequest $request): Response
     {
         $user = $this->em->getRepository(User::class)->find(1);
         $post = new Post($user, "", "",  "", "",null, "");
@@ -97,13 +99,13 @@ class PostController extends AbstractController
             $this->em->flush();
             return $this->redirectToRoute('post');
         }
-        return $this->render('post/index.html.twig', [
+        return $this->render('post/form.html.twig', [
             'form' =>$form->createView()
     
         ]);
-    }*/
-    #[Route('/', name: 'post')]
-    public function index(HttpFoundationRequest $request): Response
+    }
+    #[Route('/post/form2/', name: 'post_form2')]
+    public function postForm2(HttpFoundationRequest $request): Response
     {
         
         $post = new Post();
